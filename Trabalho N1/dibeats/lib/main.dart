@@ -40,38 +40,47 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
       body:
-      Padding(padding: const EdgeInsets.all(25.0), child: 
+      Padding(padding: const EdgeInsets.only(left: 25.0, right: 25.0), child: 
         Center(
           child: Column(
           
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              Center(
+                child:
+                SizedBox(
+                  height: 260,
+                  child:
+                    Image.asset('assets/images/LBT.png'),
+                ),
+              ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
+                  const TextField(decoration: InputDecoration( filled: true, labelText: "Username",border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(35))) ),),
+                  const SizedBox(height: 15.0,),
+                  const TextField(decoration: InputDecoration( filled: true, labelText: "Password", border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(35))),),),
+                  const SizedBox(height: 15.0,),
                   SizedBox(
+                    width: 200,
                     child:
-                      Image.asset('assets/images/LBT.png'),
-                  ),
-                ]),
-              const TextField(decoration: InputDecoration( filled: true, labelText: "Username",border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(50))) ),),
-              const SizedBox(height: 15.0,),
-              const TextField(decoration: InputDecoration( filled: true, labelText: "Password", border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(50))),),),
-              const SizedBox(height: 15.0,),
-              ElevatedButton(onPressed: () => setState(() {
-                print("Ola");
-              }), child: const Icon(Icons.autorenew)),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          ElevatedButton(onPressed: () => setState(() {
+                            
+                          }), child: const Text('LOGIN', style: TextStyle(fontSize: 20),)),
+                        ],
+                      )
+                  )
+                ]
+              )
             ],
           ),
         ),
