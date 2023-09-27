@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:dibeats/system_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,16 +20,13 @@ class MyApp extends StatelessWidget {
           ),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: "",),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -74,8 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           ElevatedButton(onPressed: () => setState(() {
-                            
-                          }), child: const Text('LOGIN', style: TextStyle(fontSize: 20),)),
+                            Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => const SystemPage())
+                            );
+                          }), child: const Text('LOGIN', style: TextStyle(fontSize: 20, color: Colors.green),)),
                         ],
                       )
                   )
