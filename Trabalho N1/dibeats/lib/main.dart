@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 52, 53, 68),
           background: const Color.fromARGB(255, 52, 53, 68),
           ),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            fontSize: 20,
+            color: Color.fromARGB(255, 255, 255, 255),
+          ),
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -73,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.of(context).push(
                               MaterialPageRoute(builder: (context) => const SystemPage())
                             );
-                          }), child: const Text('LOGIN', style: TextStyle(fontSize: 20, color: Colors.green),)),
+                          }), child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.green),)),
                         ],
                       )
                   )

@@ -10,13 +10,171 @@ class SystemPage extends StatefulWidget {
 class _SystemPageState extends State<SystemPage> {
   @override
   Widget build(BuildContext context) {
+    double paddingValue = 25.0;
     return Scaffold(
-      appBar: AppBar(
-        
-      ),
       body: 
-      const Padding(padding: EdgeInsets.only(left: 25.0, right: 25.0), child:
-        Text('Ola mundo para esta tela nova')
+      Padding(padding: const EdgeInsets.only(top: 60, left: 30.0, right: 30.0), child:
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Playlist of the Week',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),),
+                Text('Lorem Ipsum dolor',)
+              ],
+            ),
+            const SizedBox(
+              height: 35,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 420,
+                  child:
+                  ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(right: paddingValue),
+                        child: SizedBox(
+                        height: 400,
+                        width: 300,
+                        child: FloatingActionButton(onPressed: () {}, child: const Text(""),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: paddingValue),
+                        child: SizedBox(
+                        height: 400,
+                        width: 300,
+                        child: FloatingActionButton(onPressed: () {}, child: const Text(""),),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: paddingValue),
+                        child: SizedBox(
+                        height: 400,
+                        width: 300,
+                        child: FloatingActionButton(onPressed: () {}, child: const Text(""),),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: paddingValue),
+                        child: SizedBox(
+                        height: 400,
+                        width: 300,
+                        child: FloatingActionButton(onPressed: () {}, child: const Text(""),),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: paddingValue),
+                        child: SizedBox(
+                        height: 400,
+                        width: 300,
+                        child: FloatingActionButton(onPressed: () {}, child: const Text(""),),
+                        ),
+                      ),
+                    ]
+                  ),
+                ),
+                const SizedBox(
+                  height: 35,
+                ),
+                const Column(
+                  children: <Widget>[
+                    Text("Feature Artist"),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                SizedBox(
+                  height: 130,
+                  child:
+                    ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                            ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child: 
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              FloatingActionButton(
+                                onPressed: () {},
+                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
+                              ),
+                          ),
+                        ),
+                      ],
+                    ),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
