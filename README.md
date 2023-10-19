@@ -23,11 +23,11 @@ Primeiramente, foi criado uma lista de funcionalidades do aplicativo, os quais f
   - Mostrar a lista atual de reprodução;
 - Álbuns de músicas
    - Mostrar álbuns separado por:
-    - Gênero;
-    - Artista;
-    - Álbuns de artistas;
-    - Criado pelo usuário;
-    - Criar/Excluir um album de música pelo usuário;
+     - Gênero;
+     - Artista;
+     - Álbuns de artistas;
+     - Criado pelo usuário;
+     - Criar/Excluir um album de música pelo usuário;
 - Perfil do usuário
   - Mostrar o perfil do usuário;
   - Mostrar as playlists criadas;
