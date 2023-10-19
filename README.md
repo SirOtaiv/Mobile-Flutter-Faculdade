@@ -7,7 +7,7 @@
 Todo o intuito deste projeto está em desenvolver um aplicativo utilizado o *Framework* **Flutter**.
 Toda a base do projeto desenvolvido no curso se baseou em um *Wireframe* semelhante ao Spotify, sendo esta a base de toda UI.
 
-
+![WireFrame](https://github.com/SirOtaiv/Mobile-Flutter-Faculdade/blob/main/Trabalho%20N1/images/wireframe_spotify.jpg)
 
 #### Funcionalidades
 
