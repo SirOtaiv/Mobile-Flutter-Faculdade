@@ -17,18 +17,18 @@ Primeiramente, foi criado uma lista de funcionalidades do aplicativo, os quais f
 - Reprodutor de áudio;
 - Buscador de música;
 - Lista de reprodução
- - Passar para frente/atrás na lista;
- - Adicionar músicas a lista de reprodução;
- - Remover músicas a lista de reprodução;
- - Mostrar a lista atual de reprodução;
+  - Passar para frente/atrás na lista;
+  - Adicionar músicas a lista de reprodução;
+  - Remover músicas a lista de reprodução;
+  - Mostrar a lista atual de reprodução;
 - Álbuns de músicas
-  - Mostrar álbuns separado por:
-   - Gênero;
-   - Artista;
-   - Álbuns de artistas;
-   - Criado pelo usuário;
-   - Criar/Excluir um album de música pelo usuário;
+   - Mostrar álbuns separado por:
+    - Gênero;
+    - Artista;
+    - Álbuns de artistas;
+    - Criado pelo usuário;
+    - Criar/Excluir um album de música pelo usuário;
 - Perfil do usuário
- - Mostrar o perfil do usuário;
- - Mostrar as playlists criadas;
- - Acessar as playlists criadas/salvas pelo usuário;
+  - Mostrar o perfil do usuário;
+  - Mostrar as playlists criadas;
+  - Acessar as playlists criadas/salvas pelo usuário;
