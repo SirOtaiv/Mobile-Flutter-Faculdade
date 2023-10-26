@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105672468892",
+    "project_id": "dibeats",
+    "storage_bucket": "dibeats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105672468892:android:05aa8cf9de6dd3a5fbc059",
+        "android_client_info": {
+          "package_name": "otavio.dibeats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmT8JS5cmbtWDz0nw_UaeERc5t8my6XyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
