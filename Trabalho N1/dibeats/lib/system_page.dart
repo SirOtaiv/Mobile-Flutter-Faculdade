@@ -1,3 +1,4 @@
+import 'package:dibeats/player_list_page.dart';
 import 'package:flutter/material.dart';
 
 class SystemPage extends StatefulWidget {
@@ -172,6 +173,16 @@ class _SystemPageState extends State<SystemPage> {
                     ),
                 ),
               ],
+            ),
+            Padding(padding: EdgeInsets.only(top: paddingValue),
+              child: SizedBox(
+                width: 500,
+                child: ElevatedButton(onPressed: () => setState(() {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const PlayerListPage())
+                  );
+                }), child: const Text('Playlist', style: TextStyle(fontSize: 20, color: Colors.black),)),
+              ),
             )
           ],
         ),
