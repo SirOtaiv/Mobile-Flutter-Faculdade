@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 class PlayerListPage extends StatefulWidget {
   const PlayerListPage({super.key});
@@ -10,7 +12,10 @@ class PlayerListPage extends StatefulWidget {
 class _PlayerListPageState extends State<PlayerListPage> {
   @override
   Widget build(BuildContext context) {
-    // double paddingValue = 25.0;
+    // void async getPlaylist(){
+    //   await FirebaseFirestore.instance.collection('playlist').doc('playlistID').get()
+    // }
+    // // double paddingValue = 25.0;
     return Scaffold(
       body:
       Column(

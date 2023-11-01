@@ -1,11 +1,15 @@
-import 'package:dibeats/system_page.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:otavio.dibeats/system_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
