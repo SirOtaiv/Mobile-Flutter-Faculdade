@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "otavio.dibeats"
+    namespace "com.example.dibeats"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
