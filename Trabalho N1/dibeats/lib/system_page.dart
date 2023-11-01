@@ -1,4 +1,4 @@
-import 'package:otavio.dibeats/player_list_page.dart';
+import 'package:dibeats/player_list_page.dart';
 import 'package:flutter/material.dart';
 
 class SystemPage extends StatefulWidget {
