@@ -15,7 +15,7 @@ class _PlayerListPageState extends State<PlayerListPage> {
     // void async getPlaylist(){
     //   await FirebaseFirestore.instance.collection('playlist').doc('playlistID').get()
     // }
-    // // double paddingValue = 25.0;
+    // double paddingValue = 25.0;
     return Scaffold(
       body:
       Column(
