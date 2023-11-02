@@ -1,5 +1,9 @@
 import 'package:dibeats/player_list_page.dart';
+import 'package:dibeats/requests/requestType.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:provider/provider.dart';
+import 'requests/request.dart';
 
 class SystemPage extends StatefulWidget {
   const SystemPage({super.key});
@@ -7,11 +11,12 @@ class SystemPage extends StatefulWidget {
   @override
   State<SystemPage> createState() => _SystemPageState();
 }
-
 class _SystemPageState extends State<SystemPage> {
   @override
   Widget build(BuildContext context) {
+
     double paddingValue = 25.0;
+    
     return Scaffold(
       body: 
       Padding(padding: const EdgeInsets.only(top: 60, left: 30.0, right: 30.0), child:
@@ -104,7 +109,11 @@ class _SystemPageState extends State<SystemPage> {
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
                               FloatingActionButton(
-                                onPressed: () {},
+                                onPressed: () async {
+                                  Provider.of<Requests>(context, listen: false).createPlaylist(
+                                    PlaylistModel(song: 'Break', band: 'Three Days Grace')
+                                  );
+                                },
                                 backgroundColor: const Color.fromARGB(255, 0, 255, 0),
                               ),
                           ),
