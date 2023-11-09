@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'DiBeats',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 52, 53, 68),
+          seedColor: Colors.black,
           background: const Color.fromARGB(255, 52, 53, 68),
           ),
         textTheme: const TextTheme(
@@ -34,7 +34,13 @@ class MyApp extends StatelessWidget {
       ),
       home: ChangeNotifierProvider(
         create: (context) => Requests(),
-        child: const MyHomePage(),
+        child: MaterialApp(
+          home: Builder(
+            builder: (context) {
+              return const MyHomePage();
+            },
+          ),
+        ),
       )
     );
   }
@@ -52,20 +58,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
-      ),
+      backgroundColor:const Color.fromARGB(255, 52, 53, 68),
       body:
       Padding(padding: const EdgeInsets.only(left: 25.0, right: 25.0), child: 
-        Center(
-          child: Column(
-          
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Center(
                 child:
                 SizedBox(
-                  height: 260,
+                  height: 150,
                   child:
                     Image.asset('assets/images/LBT.png'),
                 ),
@@ -73,22 +79,24 @@ class _MyHomePageState extends State<MyHomePage> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  const TextField(decoration: InputDecoration( filled: true, labelText: "Username",border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(35))) ),),
+                  const TextField(decoration: InputDecoration(filled: true, fillColor: Colors.white, labelText: "Username", border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))), ),),
                   const SizedBox(height: 15.0,),
-                  const TextField(decoration: InputDecoration( filled: true, labelText: "Password", border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(35))),),),
+                  const TextField(decoration: InputDecoration(filled: true, fillColor: Colors.white, labelText: "Password", border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))),),),
                   const SizedBox(height: 15.0,),
                   SizedBox(
-                    width: 200,
+                    width: 400,
                     child:
                       Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          ElevatedButton(onPressed: () => setState(() {
+                          FloatingActionButton.extended(onPressed: () => setState(() {
                             Navigator.of(context).push(
                               MaterialPageRoute(builder: (context) => const SystemPage())
                             );
-                          }), child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.green),)),
+                          }),
+                          backgroundColor: Colors.black,
+                          label: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.green),)),
                         ],
                       )
                   )
@@ -96,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
-        ),
+        ]),
       ),
     );
   }
