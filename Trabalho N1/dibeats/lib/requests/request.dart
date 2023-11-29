@@ -1,10 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
-import 'requestType.dart';
+import 'request_type.dart';
 
 class Requests extends ChangeNotifier {
-  final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
-  CollectionReference _playlistCollection = FirebaseFirestore.instance.collection('playlist');
+  final CollectionReference _playlistCollection = FirebaseFirestore.instance.collection('playlist');
 
   Future createPlaylist(PlaylistModel playlistSong) async {
     final db = _playlistCollection.doc();

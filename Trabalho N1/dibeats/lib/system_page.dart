@@ -1,7 +1,6 @@
 import 'package:dibeats/player_list_page.dart';
-import 'package:dibeats/requests/requestType.dart';
+import 'package:dibeats/requests/request_type.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 import 'requests/request.dart';
 
