@@ -26,9 +26,14 @@ class _PlayerListPageState extends State<PlayerListPage> {
             width: 500,
             height: 450,
             child: Container(
-            color: Colors.green,
-            child: const Text("Insira aqui a música atual"),
-          ),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.pink.shade300, Colors.green]),
+              ),
+              child: const Text("Insira aqui a música atual"),
+            ),
           ),
           Padding(padding:const EdgeInsets.only(top: 30, left: 25.0, right: 25.0), child:
             Column(
@@ -44,7 +49,40 @@ class _PlayerListPageState extends State<PlayerListPage> {
                     itemBuilder: (context, index) {
                       final item = data[index];
                       return ListTile(
-                        title: Text(item, style: const TextStyle(fontSize: 25, color: Colors.white),),
+                        trailing: PopupMenuButton<String>(
+                          onSelected: (value) {},
+                          itemBuilder: (BuildContext context) {
+                            return <PopupMenuEntry<String>>[
+                              const PopupMenuItem<String>(
+                                value: 'delete',
+                                child: Text('Remove Song'))
+                            ];
+                          },
+                        ),
+                        
+                        title: Row(
+                          children:<Widget>[
+                            Padding(
+                              padding: const EdgeInsets.only(right: 5),
+                              child: SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                )
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Text(item, style: const TextStyle(fontSize: 25, color: Colors.white),),
+                          )]
+                        ),
                       );
                     },
                   ),

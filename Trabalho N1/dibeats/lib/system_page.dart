@@ -47,16 +47,23 @@ class _SystemPageState extends State<SystemPage> {
                         child: SizedBox(
                         height: 400,
                         width: 300,
-                        child: FloatingActionButton.extended(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(paddingValue)
-                          ),
-                          onPressed: () => setState(() {
+                        child: InkWell(
+                          onTap: () => setState(() {
                             Navigator.of(context).push(
                               MaterialPageRoute(builder: (context) => const PlayerListPage())
                               );
                           }), 
-                          label: const Text("Playlist N° 1", style: TextStyle(fontSize: 30, color: Colors.black)),
+                          child: Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [Colors.pink.shade300, Colors.green]),
+                              borderRadius: BorderRadius.circular(paddingValue)
+                              ),
+                              child: const Text("Playlist N° 1", style: TextStyle(fontSize: 30, color: Colors.black)),
+                            ),
                           ),
                         ),
                       ),
@@ -65,12 +72,19 @@ class _SystemPageState extends State<SystemPage> {
                         child: SizedBox(
                         height: 400,
                         width: 300,
-                        child: FloatingActionButton.extended(
-                          shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Colors.pink.shade300, Colors.green]),
+                                borderRadius: BorderRadius.circular(paddingValue)
                                 ),
-                          onPressed: () {},
-                          label: const Text(""),),
+                                child: const Text(""),
+                            ),
+                          ),
                         ),
                       ),
                       Padding(
@@ -78,12 +92,19 @@ class _SystemPageState extends State<SystemPage> {
                         child: SizedBox(
                         height: 400,
                         width: 300,
-                        child: FloatingActionButton.extended(
-                          shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Colors.pink.shade300, Colors.green]),
+                                borderRadius: BorderRadius.circular(paddingValue)
                                 ),
-                          onPressed: () {},
-                          label: const Text(""),),
+                                child: const Text(""),
+                            ),
+                          ),
                         ),
                       ),
                       Padding(
@@ -91,12 +112,19 @@ class _SystemPageState extends State<SystemPage> {
                         child: SizedBox(
                         height: 400,
                         width: 300,
-                        child: FloatingActionButton.extended(
-                          shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Colors.pink.shade300, Colors.green]),
+                                borderRadius: BorderRadius.circular(paddingValue)
                                 ),
-                          onPressed: () {},
-                          label: const Text(""),),
+                                child: const Text(""),
+                            ),
+                          ),
                         ),
                       ),
                       Padding(
@@ -104,12 +132,19 @@ class _SystemPageState extends State<SystemPage> {
                         child: SizedBox(
                         height: 400,
                         width: 300,
-                        child: FloatingActionButton.extended(
-                          shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                        child: InkWell(
+                          onTap: () {},
+                          child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Colors.pink.shade300, Colors.green]),
+                                borderRadius: BorderRadius.circular(paddingValue)
                                 ),
-                          onPressed: () {},
-                          label: const Text(""),),
+                                child: const Text(""),
+                            ),
+                          ),
                         ),
                       ),
                     ]
@@ -135,32 +170,44 @@ class _SystemPageState extends State<SystemPage> {
                         SizedBox(
                           width: 150,
                           child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () async {
+                            Padding(padding: EdgeInsets.only(right: paddingValue), 
+                            child:
+                              InkWell(
+                                onTap: () async {
                                   Provider.of<Requests>(context, listen: false).createPlaylist(
                                     PlaylistModel(song: 'Break', band: 'Three Days Grace')
                                   );
                                 },
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    ),
+                                  child: const Text("Break", style: TextStyle(fontSize: 20),),
+                                  ),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('Break', style: TextStyle(fontSize: 20, color: Colors.black)),
                               ),
-                          ),
-                        ),
+                            ),
                         SizedBox(
                           width: 150,
                           child:
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                    ),
+                                    child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
                             ),
                         ),
@@ -168,77 +215,102 @@ class _SystemPageState extends State<SystemPage> {
                           width: 150,
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                    ),
+                                    child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
-                          ),
+                            ),
                         ),
                         SizedBox(
                           width: 150,
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                    ),
+                                    child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
-                          ),
+                            ),
                         ),
                         SizedBox(
                           width: 150,
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                    ),
+                                    child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
-                          ),
+                            ),
                         ),
                         SizedBox(
                           width: 150,
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                    ),
+                                    child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
-                          ),
+                            ),
                         ),
                         SizedBox(
                           width: 150,
                           child: 
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              FloatingActionButton.extended(
-                                onPressed: () {},
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(paddingValue)
+                              InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Colors.pink.shade300, Colors.green]),
+                                    borderRadius: BorderRadius.circular(paddingValue)
+                                  ),
+                                  child: const Text(""),
                                 ),
-                                backgroundColor: const Color.fromARGB(255, 0, 255, 0),
-                                label: const Text('')
                               ),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
+                      ]
+                    )
                 ),
               ],
-            ),
+            ),                      
             Padding(padding: EdgeInsets.only(top: paddingValue),
               child: SizedBox(
                 width: 500,
