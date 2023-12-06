@@ -37,7 +37,7 @@ class _SystemPageState extends State<SystemPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 420,
+                  height: 470,
                   child:
                   ListView(
                     scrollDirection: Axis.horizontal,
@@ -162,166 +162,255 @@ class _SystemPageState extends State<SystemPage> {
                   height: 15,
                 ),
                 SizedBox(
-                  height: 130,
+                  height: 170,
                   child:
                     ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         SizedBox(
                           width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), 
-                            child:
-                              InkWell(
-                                onTap: () async {
-                                  Provider.of<Requests>(context, listen: false).createPlaylist(
-                                    PlaylistModel(song: 'Break', band: 'Three Days Grace')
-                                  );
-                                },
-                                child: Container(
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
                                     borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () async {
+                                      Provider.of<Requests>(context, listen: false).createPlaylist(
+                                        PlaylistModel(song: 'Break', band: 'Three Days Grace')
+                                      );
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
                                     ),
-                                  child: const Text("Break", style: TextStyle(fontSize: 20),),
                                   ),
-                                ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Break", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
                               ),
                             ),
+                        ),
                         SizedBox(
                           width: 150,
                           child:
                             Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
                                     ),
-                                    child: const Text(""),
-                                ),
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
-                                    ),
-                                    child: const Text(""),
-                                ),
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
-                                    ),
-                                    child: const Text(""),
-                                ),
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
-                                    ),
-                                    child: const Text(""),
-                                ),
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
-                                    ),
-                                    child: const Text(""),
-                                ),
-                              ),
-                            ),
-                        ),
-                        SizedBox(
-                          width: 150,
-                          child: 
-                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.pink.shade300, Colors.green]),
-                                    borderRadius: BorderRadius.circular(paddingValue)
                                   ),
-                                  child: const Text(""),
-                                ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
                               ),
                             ),
-                          ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
+                              ),
+                            ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
+                              ),
+                            ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
+                              ),
+                            ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
+                              ),
+                            ),
+                        ),
+                        SizedBox(
+                          width: 150,
+                          child:
+                            Padding(padding: EdgeInsets.only(right: paddingValue), child:
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  InkWell(
+                                    borderRadius: BorderRadius.circular(paddingValue),
+                                    onTap: () {},
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [Colors.pink.shade300, Colors.green]),
+                                        borderRadius: BorderRadius.circular(paddingValue), 
+                                        ),
+                                        child: const SizedBox(
+                                          width: 150,
+                                          height: 130,
+                                          child: Text('') ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text("Lorem", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              ]
+                              ),
+                            ),
+                        ),
                       ]
                     )
                 ),
               ],
             ),                      
-            Padding(padding: EdgeInsets.only(top: paddingValue),
-              child: SizedBox(
-                width: 500,
-                child: 
-                FloatingActionButton.extended(onPressed: () {},
-                  backgroundColor: Colors.white, 
-                  label: const Text('Playlist', style: TextStyle(fontSize: 20, color: Colors.black)
-                    )
-                ),
-              ),
-            )
+            // Padding(padding: EdgeInsets.only(top: paddingValue),
+            //   child: SizedBox(
+            //     width: 500,
+            //     child: 
+            //     FloatingActionButton.extended(onPressed: () {},
+            //       backgroundColor: Colors.white, 
+            //       label: const Text('Playlist', style: TextStyle(fontSize: 20, color: Colors.black)
+            //         )
+            //     ),
+            //   ),
+            // )
           ],
         ),
       ),
