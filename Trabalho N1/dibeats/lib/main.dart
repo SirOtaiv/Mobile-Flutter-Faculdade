@@ -1,3 +1,4 @@
+import 'package:dibeats/register_page.dart';
 import 'package:dibeats/requests/request.dart';
 import 'package:dibeats/system_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -77,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         password: password
       );
 
+      // ignore: use_build_context_synchronously
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const SystemPage())
@@ -93,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         errorStatus = ErrorStatus(code: e.code, message: e.message!);
       }
 
+      // ignore: use_build_context_synchronously
       showDialog(context: context, 
       builder: (BuildContext context) {
         return AlertDialog(
@@ -141,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration:const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      labelText: "Username", 
+                      labelText: "Email or Username", 
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(20)
@@ -176,6 +179,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           label: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.green),)),
                         ],
                       )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25),
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const RegisterPage())
+                        );
+                      }),
+                      child: const Text('Criar conta',
+                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      ),
+                    ),
                   )
                 ]
               )
