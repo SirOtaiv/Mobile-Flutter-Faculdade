@@ -147,7 +147,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         });
                       }, 
                       icon: Icon(
-                        _passVisible ? Icons.visibility : Icons.visibility_off
+                        _passVisibleSec ? Icons.visibility : Icons.visibility_off
                       )
                     )
                   ),
