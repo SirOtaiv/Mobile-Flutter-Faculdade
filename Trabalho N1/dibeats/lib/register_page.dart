@@ -1,3 +1,6 @@
+import 'package:dibeats/main.dart';
+import 'package:dibeats/system_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -11,6 +14,56 @@ class _RegisterPageState extends State<RegisterPage> {
 
   bool _passVisible = true;
   bool _passVisibleSec = true;
+
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  final TextEditingController _emailInput = TextEditingController();
+  final TextEditingController _passwordFirInput = TextEditingController();
+  final TextEditingController _passwordSecInput = TextEditingController();
+
+  Future<void> registerProcess() async {
+    String emailReg = _emailInput.text.trim();
+    String passFir = _passwordFirInput.text;
+    String passSec = _passwordSecInput.text;
+    ErrorStatus errorStatus = ErrorStatus(code: 'any', message: '');
+
+    if (passFir == passSec) {
+      try {
+        UserCredential registerCredential = await _auth.createUserWithEmailAndPassword(email: emailReg, password: passFir);
+
+        // ignore: use_build_context_synchronously
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const SystemPage())
+        );  
+      } on FirebaseAuthException catch(e) {
+        if (e.code == 'email-already-in-use'){
+          errorStatus.message = 'Email já em uso, por favor faça login';
+        }
+      }
+
+    } else {
+      errorStatus = ErrorStatus(code: 'any', message: 'As senhas não são iguais, por favor revise');
+    }
+
+    // ignore: use_build_context_synchronously
+    showDialog(context: context, 
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Failed to register'),
+          content: Text(errorStatus.message),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Fechar'),
+            ),
+          ],
+        );
+      });
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +89,10 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 35,
               ),
-              const Center(
+              Center(
                 child: TextField(
-                  decoration: InputDecoration(
+                  controller: _emailInput,
+                  decoration: const InputDecoration(
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20))
@@ -52,6 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               Center(
                 child: TextField(
+                  controller: _passwordFirInput,
                   obscureText: _passVisible,
                   decoration: InputDecoration(
                     filled: true,
@@ -77,6 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               Center(
                 child: TextField(
+                  controller: _passwordSecInput,
                   obscureText: _passVisibleSec,
                   decoration: InputDecoration(
                     filled: true,
@@ -129,7 +185,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           height: 50,
                           width: 160,
                           child: InkWell(
-                            onTap: () {},
+                            onTap: () async => registerProcess(),
                             child: Container(
                               decoration: BoxDecoration(
                                 gradient: const LinearGradient(
